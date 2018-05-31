@@ -1,0 +1,4 @@
+*.pdb
+*.csproj.user
+*.dll
+/.vs
