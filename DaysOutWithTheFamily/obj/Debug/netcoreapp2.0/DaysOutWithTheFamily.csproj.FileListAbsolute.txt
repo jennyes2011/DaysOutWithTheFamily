@@ -1,0 +1,11 @@
+c:\users\jenny\source\repos\DaysOutWithTheFamily\DaysOutWithTheFamily\bin\Debug\netcoreapp2.0\DaysOutWithTheFamily.deps.json
+c:\users\jenny\source\repos\DaysOutWithTheFamily\DaysOutWithTheFamily\bin\Debug\netcoreapp2.0\DaysOutWithTheFamily.runtimeconfig.json
+c:\users\jenny\source\repos\DaysOutWithTheFamily\DaysOutWithTheFamily\bin\Debug\netcoreapp2.0\DaysOutWithTheFamily.runtimeconfig.dev.json
+c:\users\jenny\source\repos\DaysOutWithTheFamily\DaysOutWithTheFamily\bin\Debug\netcoreapp2.0\DaysOutWithTheFamily.dll
+c:\users\jenny\source\repos\DaysOutWithTheFamily\DaysOutWithTheFamily\bin\Debug\netcoreapp2.0\DaysOutWithTheFamily.pdb
+c:\users\jenny\source\repos\DaysOutWithTheFamily\DaysOutWithTheFamily\obj\Debug\netcoreapp2.0\DaysOutWithTheFamily.csproj.CoreCompileInputs.cache
+c:\users\jenny\source\repos\DaysOutWithTheFamily\DaysOutWithTheFamily\obj\Debug\netcoreapp2.0\DaysOutWithTheFamily.AssemblyInfoInputs.cache
+c:\users\jenny\source\repos\DaysOutWithTheFamily\DaysOutWithTheFamily\obj\Debug\netcoreapp2.0\DaysOutWithTheFamily.AssemblyInfo.cs
+c:\users\jenny\source\repos\DaysOutWithTheFamily\DaysOutWithTheFamily\obj\Debug\netcoreapp2.0\DaysOutWithTheFamily.dll
+c:\users\jenny\source\repos\DaysOutWithTheFamily\DaysOutWithTheFamily\obj\Debug\netcoreapp2.0\DaysOutWithTheFamily.pdb
+c:\users\jenny\source\repos\DaysOutWithTheFamily\DaysOutWithTheFamily\obj\Debug\netcoreapp2.0\DaysOutWithTheFamily.csprojAssemblyReference.cache

@@ -1,0 +1,38 @@
+﻿@model IEnumerable<BlogPostModel>;
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+    <!-- Main Content -->
+<div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+
+                @foreach (var item in Model)
+                {
+
+                    <div class="post-preview">
+                        <a href="post.html">
+                            <h2 class="post-title">
+                                @item.Title
+                            </h2>
+                            <h3 class="post-subtitle">
+                                @item.SubTitle
+                            </h3>
+                        </a>
+                        <p class="post-meta">
+                            Posted on @item.Created
+                        </p>
+
+                    </div>
+                    <hr>
+
+                }
+                <!-- Pager -->
+                <div class="clearfix">
+                    <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
+                </div>
+            </div>
+        </div>
+</div>
+
