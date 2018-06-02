@@ -5,11 +5,18 @@ using System.Linq;
 
 namespace DaysOutWithTheFamily.Models.DataAccess
 {
-    public class PostManager
+
+    public class PostJsnRepository : iPostRepository
     {
         private static List<BlogPostModel> posts = new List<BlogPostModel>();
+        private string postFile;
 
-        public static void Create(BlogPostModel blogPost, string postFile)
+        public PostJsnRepository(string postFile)
+        {
+            this.postFile = postFile;
+        }
+
+        public void Create(BlogPostModel blogPost)
         {
             //Get the post ID
             if (posts.Count > 0)
@@ -31,20 +38,20 @@ namespace DaysOutWithTheFamily.Models.DataAccess
             save(postFile);
         }
 
-        public static void Delete(int id, string postFile)
+        public void Delete(int id)
         {
             posts.Remove(posts.Find(x => x.ID == id));
             save(postFile);
         }
 
-        public static void Update(int id, BlogPostModel newPost, string postFile)
+        public void Update(int id, BlogPostModel blogPost)
         {
-            Delete(id, postFile);
-            Create(newPost, postFile);
+            Delete(id);
+            Create(blogPost);
             save(postFile);
         }
 
-        public static List<BlogPostModel> Read(string postFile)
+        public List<BlogPostModel> Read()
         {
             if (!File.Exists(postFile))
             {
@@ -54,12 +61,13 @@ namespace DaysOutWithTheFamily.Models.DataAccess
             }
 
             posts = JsonConvert.DeserializeObject<List<BlogPostModel>>(File.ReadAllText(postFile));
-            return posts; 
+            return posts;
         }
 
-        private static void save(string postFile)
+        private void save(string postFile)
         {
             File.WriteAllText(postFile, JsonConvert.SerializeObject(posts));
         }
+
     }
 }

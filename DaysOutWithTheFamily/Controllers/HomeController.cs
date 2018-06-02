@@ -10,21 +10,17 @@ namespace DaysOutWithTheFamily.Controllers
 {
     public class HomeController : Controller
     {
-        private string postFile;
+        private PostService postService;
 
         public HomeController(IHostingEnvironment hostingEnvironment)
         {
-            postFile = Path.Combine(hostingEnvironment.ContentRootPath, "posts.jsn");
+            string postFile = Path.Combine(hostingEnvironment.ContentRootPath, "posts.jsn");
+            postService = new PostService(postFile);
         }
 
         public IActionResult Index()
         {
-            var blogPosts = PostManager.Read(postFile);
-
-            blogPosts = (from blog in blogPosts
-                         orderby blog.Created descending
-                         select blog).ToList();
-
+            var blogPosts = postService.GetPostsForMainPage();
             return View(blogPosts);
         }
 
@@ -66,8 +62,8 @@ namespace DaysOutWithTheFamily.Controllers
         [HttpPost]
         public IActionResult Create(BlogPostModel blogPostModel)
         {
-            PostManager.Create(blogPostModel, postFile);
-            return View("index", PostManager.Read(postFile));
+            postService.CreatePost(blogPostModel);
+            return View("index", postService.GetPostsForMainPage());
         }
     }
 }
